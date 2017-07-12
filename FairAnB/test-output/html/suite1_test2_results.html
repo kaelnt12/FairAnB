@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Run on Firefox</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Run on Firefox</h1>
+<p>
+  Test duration: 397.177s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">Login.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 020: Check incase login branch account ">TC_020_LogIn_BranchAccount</span>
+      </td>
+  <td class="duration">
+    48.392s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:33,145 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:33,616 INFO&nbsp; LoginTest - Step 02: Input Admin ID<br/>
+<br />
+                                2017-05-19 10:21:33,719 INFO&nbsp; LoginTest - Step 03: Input Admin Pwd<br/>
+<br />
+                                2017-05-19 10:21:33,820 INFO&nbsp; LoginTest - Step 04: Click login button<br/>
+<br />
+                                2017-05-19 10:21:36,326 INFO&nbsp; LoginTest - VP 01.Login with Company account<br/>
+<br />
+                                2017-05-19 10:22:06,445 INFO&nbsp; LoginTest - ==Verify condition is FAILED==<br/>
+<br />
+                                2017-05-19 10:22:06,445 INFO&nbsp; LoginTest - Step 05: LogOut<br/>
+<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}<br/>
+Command duration or timeout: 15.09 seconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]<br/>
+Session ID: f9dc6c41-f095-40e1-9e9a-503c4c4613fa<br/>
+*** Element info: {Using=xpath, value=//a[@href=&apos;/logout&apos;]}</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+              org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+              common.AutomationControl.findElement(AutomationControl.java:14)<br />
+              common.AbstractPage.waitForElement(AbstractPage.java:70)<br />
+              page.DashboardPage.logOut(DashboardPage.java:37)<br />
+              Login.LoginTest.TC_020_LogIn_BranchAccount(LoginTest.java:319)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: driver.version: unknown</a><br />
+        <div class="stackTrace" id="exception-1">
+                      &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous3072647721897195052webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)<br />
+                      &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous3072647721897195052webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 027: Check user inputs invalid email">TC_027_ForgotPwd_Invalid_Email</span>
+      </td>
+  <td class="duration">
+    32.977s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:22:29,749 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:22:29,999 INFO&nbsp; LoginTest - Step 02: Input Invalid Email<br/>
+<br />
+                                2017-05-19 10:22:30,097 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:22:32,583 INFO&nbsp; LoginTest - VP 01. &apos;このメールアドレスに一致するユーザーを見つけることが出来ませんでした。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:23:02,724 INFO&nbsp; LoginTest - ==Verify condition is FAILED==<br/>
+<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [true] but found [false]</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              org.testng.Assert.failNotEquals(Assert.java:494)<br />
+              org.testng.Assert.assertTrue(Assert.java:42)<br />
+              org.testng.Assert.assertTrue(Assert.java:52)<br />
+              common.AbstractTest.verifyTrue(AbstractTest.java:40)<br />
+              common.AbstractTest.verifyTrue(AbstractTest.java:55)<br />
+              Login.LoginTest.TC_027_ForgotPwd_Invalid_Email(LoginTest.java:371)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 039: Check user inputs valid password and password confirmation 2 times">TC_039_Reset_Pwd_with_ValidValue_2times</span>
+      </td>
+  <td class="duration">
+    42.472s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:24:57,709 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:24:58,075 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:24:58,201 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:25:04,187 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:25:08,811 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:25:12,714 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:25:12,929 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:25:19,106 INFO&nbsp; LoginTest - Step 08: Input new password with valid value<br/>
+<br />
+                                2017-05-19 10:25:19,487 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:25:25,079 INFO&nbsp; LoginTest - Step 10: LogOut<br/>
+<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}<br/>
+Command duration or timeout: 15.10 seconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]<br/>
+Session ID: f9dc6c41-f095-40e1-9e9a-503c4c4613fa<br/>
+*** Element info: {Using=xpath, value=//a[@href=&apos;/logout&apos;]}</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+              org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+              common.AutomationControl.findElement(AutomationControl.java:14)<br />
+              common.AbstractPage.waitForElement(AbstractPage.java:70)<br />
+              page.DashboardPage.logOut(DashboardPage.java:37)<br />
+              Login.LoginTest.TC_039_Reset_Pwd_with_ValidValue_2times(LoginTest.java:582)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: driver.version: unknown</a><br />
+        <div class="stackTrace" id="exception-4">
+                      &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous3072647721897195052webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)<br />
+                      &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous3072647721897195052webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">Login.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 002: Check the display title of [login screen] page ">TC_002_Title_Login_Screen</span>
+      </td>
+  <td class="duration">
+    0.087s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:20:48,494 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:20:48,494 INFO&nbsp; LoginTest - VP. Verify that the title is &apos;カラダかわるNavi Management System&apos;<br/>
+<br />
+                                2017-05-19 10:20:48,580 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 003: Check user doesn't input ID and password">TC_003_No_ID_and_No_Password</span>
+      </td>
+  <td class="duration">
+    3.137s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:20:48,582 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:20:49,030 INFO&nbsp; LoginTest - Step 02: Click Login button without input ID, password<br/>
+<br />
+                                2017-05-19 10:20:51,644 INFO&nbsp; LoginTest - VP 01. &apos;ログインIDは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:20:51,690 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-05-19 10:20:51,690 INFO&nbsp; LoginTest - VP 02. &apos;パスワードは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:20:51,717 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 004: Check user inputs valid ID and doesn't input password">TC_004_Vaid_ID_and_No_Password</span>
+      </td>
+  <td class="duration">
+    3.999s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:20:51,719 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:20:52,125 INFO&nbsp; LoginTest - Step 02: Input valid ID<br/>
+<br />
+                                2017-05-19 10:20:52,932 INFO&nbsp; LoginTest - Step 03: Click Login button with valid ID and doesn&apos;t input password<br/>
+<br />
+                                2017-05-19 10:20:55,660 INFO&nbsp; LoginTest - VP 01. &apos;パスワードは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:20:55,718 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 005: Check user doesn't input ID and inputs valid password">TC_005_No_ID_and_Valid_Password</span>
+      </td>
+  <td class="duration">
+    3.240s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:20:55,719 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:20:56,110 INFO&nbsp; LoginTest - Step 02: Input valid Pwd<br/>
+<br />
+                                2017-05-19 10:20:56,292 INFO&nbsp; LoginTest - Step 03: Click Login button with doesn&apos;t input ID and valid password<br/>
+<br />
+                                2017-05-19 10:20:58,903 INFO&nbsp; LoginTest - VP 01. &apos;ログインIDは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:20:58,959 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 006: Check user inputs invalid ID and doesn't input password">TC_006_Invaid_ID_and_No_Password</span>
+      </td>
+  <td class="duration">
+    3.367s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:20:58,960 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:20:59,399 INFO&nbsp; LoginTest - Step 02: Input invalid ID<br/>
+<br />
+                                2017-05-19 10:20:59,606 INFO&nbsp; LoginTest - Step 03: Click Login button with valid ID and doesn&apos;t input password<br/>
+<br />
+                                2017-05-19 10:21:02,090 INFO&nbsp; LoginTest - VP 01. &apos;パスワードは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:21:02,326 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 007: Check user doesn't input ID and inputs invalid password">TC_007_No_ID_and_Invalid_Password</span>
+      </td>
+  <td class="duration">
+    3.244s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:02,329 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:02,787 INFO&nbsp; LoginTest - Step 02: Input valid Pwd<br/>
+<br />
+                                2017-05-19 10:21:02,950 INFO&nbsp; LoginTest - Step 03: Click Login button with doesn&apos;t input ID and valid password<br/>
+<br />
+                                2017-05-19 10:21:05,504 INFO&nbsp; LoginTest - VP 01. &apos;ログインIDは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:21:05,572 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 008: Check user inputs valid ID and invalid password">TC_008_Valid_ID_and_Invalid_Password</span>
+      </td>
+  <td class="duration">
+    3.442s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:05,578 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:05,999 INFO&nbsp; LoginTest - Step 02: Input valid ID<br/>
+<br />
+                                2017-05-19 10:21:06,130 INFO&nbsp; LoginTest - Step 03: Input invalid Pwd<br/>
+<br />
+                                2017-05-19 10:21:06,230 INFO&nbsp; LoginTest - Step 04: Click Login button with valid ID and invalid password<br/>
+<br />
+                                2017-05-19 10:21:08,963 INFO&nbsp; LoginTest - VP 01. &apos;認証情報と一致するレコードがありません。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:21:09,019 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 009: Check user inputs invalid ID and valid password">TC_009_Invalid_ID_and_Valid_Password</span>
+      </td>
+  <td class="duration">
+    4.093s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:09,020 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:10,265 INFO&nbsp; LoginTest - Step 02: Input valid ID<br/>
+<br />
+                                2017-05-19 10:21:10,384 INFO&nbsp; LoginTest - Step 03: Input invalid Pwd<br/>
+<br />
+                                2017-05-19 10:21:10,548 INFO&nbsp; LoginTest - Step 04: Click Login button with invalid ID and valid password<br/>
+<br />
+                                2017-05-19 10:21:13,058 INFO&nbsp; LoginTest - VP 01. &apos;認証情報と一致するレコードがありません。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:21:13,112 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 010: Check user inputs invalid ID and invalid password">TC_010_Invalid_ID_and_Invalid_Password</span>
+      </td>
+  <td class="duration">
+    3.235s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:13,114 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:13,552 INFO&nbsp; LoginTest - Step 02: Input valid ID<br/>
+<br />
+                                2017-05-19 10:21:13,646 INFO&nbsp; LoginTest - Step 03: Input invalid Pwd<br/>
+<br />
+                                2017-05-19 10:21:13,784 INFO&nbsp; LoginTest - Step 04: Click Login button with invalid ID and valid password<br/>
+<br />
+                                2017-05-19 10:21:16,302 INFO&nbsp; LoginTest - VP 01. &apos;認証情報と一致するレコードがありません。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:21:16,348 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 011: Check user input valid ID and valid password">TC_011_Valid_ID_and_Valid_Password</span>
+      </td>
+  <td class="duration">
+    5.031s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:16,354 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:16,884 INFO&nbsp; LoginTest - Step 02: Input valid ID<br/>
+<br />
+                                2017-05-19 10:21:17,024 INFO&nbsp; LoginTest - Step 03: Input valid Pwd<br/>
+<br />
+                                2017-05-19 10:21:17,142 INFO&nbsp; LoginTest - Step 04: Click Login button with invalid ID and valid password<br/>
+<br />
+                                2017-05-19 10:21:20,727 INFO&nbsp; LoginTest - VP 01. Come to Dashboard screen<br/>
+<br />
+                                2017-05-19 10:21:20,764 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-05-19 10:21:20,764 INFO&nbsp; LoginTest - Log Out<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 017: Check ログインID/パスワードを忘れた場合は？ button">TC_017_Check_Forgot_Pwd_function</span>
+      </td>
+  <td class="duration">
+    3.108s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:21,387 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:21,923 INFO&nbsp; LoginTest - Step 02: Click Forgot Password button<br/>
+<br />
+                                2017-05-19 10:21:24,435 INFO&nbsp; LoginTest - VP 01. Verify Forgot Password Page appears<br/>
+<br />
+                                2017-05-19 10:21:24,493 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 018: Check incase login by admin account">TC_018_LogIn_AdminAccount</span>
+      </td>
+  <td class="duration">
+    4.471s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:24,495 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:24,961 INFO&nbsp; LoginTest - Step 02: Input Admin ID<br/>
+<br />
+                                2017-05-19 10:21:25,095 INFO&nbsp; LoginTest - Step 03: Input Admin Pwd<br/>
+<br />
+                                2017-05-19 10:21:25,212 INFO&nbsp; LoginTest - Step 04: Click login button<br/>
+<br />
+                                2017-05-19 10:21:28,201 INFO&nbsp; LoginTest - VP 01.Login with admin account<br/>
+<br />
+                                2017-05-19 10:21:28,275 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-05-19 10:21:28,275 INFO&nbsp; LoginTest - Step 05: LogOut<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 019: Check incase login by company account ">TC_019_LogIn_CompnayAccount</span>
+      </td>
+  <td class="duration">
+    4.176s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:21:28,966 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:21:29,377 INFO&nbsp; LoginTest - Step 02: Input Admin ID<br/>
+<br />
+                                2017-05-19 10:21:29,492 INFO&nbsp; LoginTest - Step 03: Input Admin Pwd<br/>
+<br />
+                                2017-05-19 10:21:29,607 INFO&nbsp; LoginTest - Step 04: Click login button<br/>
+<br />
+                                2017-05-19 10:21:32,502 INFO&nbsp; LoginTest - VP 01.Login with Company account<br/>
+<br />
+                                2017-05-19 10:21:32,558 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-05-19 10:21:32,558 INFO&nbsp; LoginTest - Step 05: LogOut<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 021: Check incase login by agent account ">TC_021_LogIn_AgentAccount</span>
+      </td>
+  <td class="duration">
+    4.971s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:22:21,545 INFO&nbsp; LoginTest - Step 01: Come to login screen<br/>
+<br />
+                                2017-05-19 10:22:22,015 INFO&nbsp; LoginTest - Step 02: Input Admin ID<br/>
+<br />
+                                2017-05-19 10:22:22,125 INFO&nbsp; LoginTest - Step 03: Input Admin Pwd<br/>
+<br />
+                                2017-05-19 10:22:22,272 INFO&nbsp; LoginTest - Step 04: Click login button<br/>
+<br />
+                                2017-05-19 10:22:25,534 INFO&nbsp; LoginTest - VP 01.Login with Agent account<br/>
+<br />
+                                2017-05-19 10:22:25,570 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-05-19 10:22:25,570 INFO&nbsp; LoginTest - Step 05: LogOut<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 026: Check user doesn't input email">TC_026_ForgotPwd_Without_Email</span>
+      </td>
+  <td class="duration">
+    3.231s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:22:26,517 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:22:26,861 INFO&nbsp; LoginTest - Step 02: Click Reset button<br/>
+<br />
+                                2017-05-19 10:22:29,690 INFO&nbsp; LoginTest - VP 01. &apos;メールは、必ず指定してください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:22:29,748 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 028: Check user inputs valid email">TC_028_ForgotPwd_Valid_Email</span>
+      </td>
+  <td class="duration">
+    3.468s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:23:02,730 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:23:03,101 INFO&nbsp; LoginTest - Step 02: Input Valid Email<br/>
+<br />
+                                2017-05-19 10:23:03,234 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:23:06,135 INFO&nbsp; LoginTest - VP 01. Come to 送信完了 screen <br/>
+<br />
+                                2017-05-19 10:23:06,196 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 029: Check resest email with register email">TC_029_ForgotPwd_Reset_Register_Email</span>
+      </td>
+  <td class="duration">
+    21.215s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:23:06,198 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:23:06,505 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:23:06,627 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:23:12,570 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:23:22,472 INFO&nbsp; LoginTest - Step 05: SignIn emaiil<br/>
+<br />
+                                2017-05-19 10:23:27,232 INFO&nbsp; LoginTest - VP 01. Verify Receive Email<br/>
+<br />
+                                2017-05-19 10:23:27,412 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 030: Check match email">TC_030_ForgotPwd_Unregister_Email</span>
+      </td>
+  <td class="duration">
+    3.316s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:23:27,414 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:23:27,835 INFO&nbsp; LoginTest - Step 02: Input Valid Email<br/>
+<br />
+                                2017-05-19 10:23:27,968 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:23:30,675 INFO&nbsp; LoginTest - VP 01. &apos;このメールアドレスに一致するユーザーを見つけることが出来ませんでした。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:23:30,730 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 033: Check Cancel button">TC_033_Check_Cancel_Button</span>
+      </td>
+  <td class="duration">
+    0.717s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:23:30,732 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:23:31,024 INFO&nbsp; LoginTest - Step 02: Click Cancel button<br/>
+<br />
+                                2017-05-19 10:23:31,392 INFO&nbsp; LoginTest - VP 01. Verify that come to LogIn page<br/>
+<br />
+                                2017-05-19 10:23:31,449 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 034: Check valid value of password and password confirmation">TC_034_RestPwd_with_validPwd</span>
+      </td>
+  <td class="duration">
+    31.412s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:23:31,450 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:23:32,034 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:23:32,183 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:23:37,787 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:23:42,711 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:23:48,259 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:23:48,428 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:23:54,509 INFO&nbsp; LoginTest - Step 08: Change password with valid value<br/>
+<br />
+                                2017-05-19 10:23:54,768 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:24:01,785 INFO&nbsp; LoginTest - VP 01. Verify Password is changed<br/>
+<br />
+                                2017-05-19 10:24:01,859 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 035: Check invalid value of password and password confirmation">TC_035_RestPwd_with_InvalidPwd</span>
+      </td>
+  <td class="duration">
+    28.731s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:24:02,863 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:24:03,457 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:24:03,680 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:24:09,754 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:24:12,589 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:24:17,889 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:24:19,963 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:24:25,741 INFO&nbsp; LoginTest - Step 08: Change password with invalid value<br/>
+<br />
+                                2017-05-19 10:24:26,000 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:24:31,547 INFO&nbsp; LoginTest - VP 01. Verify Error message is displayed<br/>
+<br />
+                                2017-05-19 10:24:31,592 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 036: Check user doesn't input password and and password confirmation">TC_036_Reset_Pwd_without_Input</span>
+      </td>
+  <td class="duration">
+    26.114s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:24:31,594 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:24:31,914 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:24:32,046 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:24:37,871 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:24:41,515 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:24:45,528 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:24:45,682 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:24:52,031 INFO&nbsp; LoginTest - Step 08: Reset Password<br/>
+<br />
+                                2017-05-19 10:24:57,645 INFO&nbsp; LoginTest - VP 01. &apos;このメールアドレスに一致するユーザーを見つけることが出来ませんでした。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:24:57,706 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 038: Check user inputs valid password and password confirmation">TC_038_Reset_Pwd_with_ValidPwd</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:24:57,708 INFO&nbsp; LoginTest - Step 01: Check user inputs valid password and password confirmation<br/>
+<br />
+                                2017-05-19 10:24:57,708 INFO&nbsp; LoginTest - VP 01. Password is changed<br/>
+<br />
+                                2017-05-19 10:24:57,708 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 040: Check user inputs less than 8 characters">TC_040_Reset_Pwd_with_Pwdlessthan8cha</span>
+      </td>
+  <td class="duration">
+    33.473s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:25:40,207 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:25:40,501 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:25:40,631 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:25:46,950 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:25:57,252 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:26:01,167 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:26:01,336 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:26:07,470 INFO&nbsp; LoginTest - Step 08: Input new password with valid value<br/>
+<br />
+                                2017-05-19 10:26:07,720 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:26:13,632 INFO&nbsp; LoginTest - VP 01. &apos;パスワードは、8文字以上にしてください。。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:26:13,679 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 041: Check user inputs from 8 to 15 characters">TC_041_Reset_Pwd_with_ValidPwd</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:26:13,680 INFO&nbsp; LoginTest - Step 01: Check user inputs from 8 to 15 characters<br/>
+<br />
+                                2017-05-19 10:26:13,680 INFO&nbsp; LoginTest - VP 01. Password is changed<br/>
+<br />
+                                2017-05-19 10:26:13,680 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 042: Check user inputs more than 15 characters">TC_042_Reset_Pwd_with_Pwdmorethan15cha</span>
+      </td>
+  <td class="duration">
+    26.744s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:26:13,681 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:26:14,170 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:26:14,464 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:26:20,362 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:26:24,498 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:26:28,039 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:26:28,496 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:26:34,616 INFO&nbsp; LoginTest - Step 08: Input new password with valid value<br/>
+<br />
+                                2017-05-19 10:26:34,865 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:26:40,362 INFO&nbsp; LoginTest - VP 01. &apos;パスワードは、15文字以下にしてください。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:26:40,424 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 043: Check password and password confirmation are not the same">TC_043_Reset_Pwd_with_PwdisNotSame</span>
+      </td>
+  <td class="duration">
+    34.308s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:26:40,426 INFO&nbsp; LoginTest - Step 01: Come to Reset screen<br/>
+<br />
+                                2017-05-19 10:26:40,724 INFO&nbsp; LoginTest - Step 02: Input Registered Email<br/>
+<br />
+                                2017-05-19 10:26:40,855 INFO&nbsp; LoginTest - Step 03: Click Reset button<br/>
+<br />
+                                2017-05-19 10:26:47,277 INFO&nbsp; LoginTest - Step 04: Open Mailinator Page<br/>
+<br />
+                                2017-05-19 10:26:59,020 INFO&nbsp; LoginTest - Step 05: SignIn email<br/>
+<br />
+                                2017-05-19 10:27:02,788 INFO&nbsp; LoginTest - Step 06: Open Reset Password mail<br/>
+<br />
+                                2017-05-19 10:27:02,933 INFO&nbsp; LoginTest - Step 07: Go to Reset Password page<br/>
+<br />
+                                2017-05-19 10:27:08,800 INFO&nbsp; LoginTest - Step 08: Input new password with valid value<br/>
+<br />
+                                2017-05-19 10:27:09,057 INFO&nbsp; LoginTest - Step 09: Reset Password<br/>
+<br />
+                                2017-05-19 10:27:14,673 INFO&nbsp; LoginTest - VP 01. &apos;パスワード確認とパスワードが一致しません。&apos; message is displayed<br/>
+<br />
+                                2017-05-19 10:27:14,733 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="TC 044: Check password and password confirmation are the same">TC_044_Reset_Pwd_with_PwdisSame</span>
+      </td>
+  <td class="duration">
+    0.002s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        2017-05-19 10:27:14,736 INFO&nbsp; LoginTest - Step 01: Check password and password confirmation are the same<br/>
+<br />
+                                2017-05-19 10:27:14,736 INFO&nbsp; LoginTest - VP 01. Password is changed<br/>
+<br />
+                                2017-05-19 10:27:14,736 INFO&nbsp; LoginTest - ==Verify condition is PASSED==<br/>
+<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>

@@ -1,0 +1,309 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/31</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 22 09:44:34 ICT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (91 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Login.LoginTest.setup()'><b>setup</b><br>Test class: Login.LoginTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by @Configuration on method setup but has not been marked @Optional or defined
+in C:\Users\AsianTech\AppData\Local\Temp\testng-eclipse--1019941728\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:355)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+</pre></div><a href='#' onClick='toggleBox("stack-trace93314457", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace93314457'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by @Configuration on method setup but has not been marked @Optional or defined
+in C:\Users\AsianTech\AppData\Local\Temp\testng-eclipse--1019941728\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:355)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+</pre></div></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Login.LoginTest.afterClass()'><b>afterClass</b><br>Test class: Login.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Login.LoginTest.TC_002_Title_Login_Screen()'><b>TC_002_Title_Login_Screen</b><br>Test class: Login.LoginTest<br>Test method: TC 002: Check the display title of [login screen] page </td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_003_No_ID_and_No_Password()'><b>TC_003_No_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 003: Check user doesn't input ID and password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_004_Vaid_ID_and_No_Password()'><b>TC_004_Vaid_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 004: Check user inputs valid ID and doesn't input password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_005_No_ID_and_Valid_Password()'><b>TC_005_No_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 005: Check user doesn't input ID and inputs valid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_006_Invaid_ID_and_No_Password()'><b>TC_006_Invaid_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 006: Check user inputs invalid ID and doesn't input password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_007_No_ID_and_Invalid_Password()'><b>TC_007_No_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 007: Check user doesn't input ID and inputs invalid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_008_Valid_ID_and_Invalid_Password()'><b>TC_008_Valid_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 008: Check user inputs valid ID and invalid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_009_Invalid_ID_and_Valid_Password()'><b>TC_009_Invalid_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 009: Check user inputs invalid ID and valid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_010_Invalid_ID_and_Invalid_Password()'><b>TC_010_Invalid_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 010: Check user inputs invalid ID and invalid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_011_Valid_ID_and_Valid_Password()'><b>TC_011_Valid_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 011: Check user input valid ID and valid password</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_017_Check_Forgot_Pwd_function()'><b>TC_017_Check_Forgot_Pwd_function</b><br>Test class: Login.LoginTest<br>Test method: TC 017: Check ログインID/パスワードを忘れた場合は？ button</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_018_LogIn_AdminAccount()'><b>TC_018_LogIn_AdminAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 018: Check incase login by admin account</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_019_LogIn_CompnayAccount()'><b>TC_019_LogIn_CompnayAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 019: Check incase login by company account </td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_020_LogIn_BranchAccount()'><b>TC_020_LogIn_BranchAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 020: Check incase login branch account </td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_021_LogIn_AgentAccount()'><b>TC_021_LogIn_AgentAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 021: Check incase login by agent account </td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_026_ForgotPwd_Without_Email()'><b>TC_026_ForgotPwd_Without_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 026: Check user doesn't input email</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_027_ForgotPwd_Invalid_Email()'><b>TC_027_ForgotPwd_Invalid_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 027: Check user inputs invalid email</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_028_ForgotPwd_Valid_Email()'><b>TC_028_ForgotPwd_Valid_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 028: Check user inputs valid email</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_029_ForgotPwd_Reset_Register_Email()'><b>TC_029_ForgotPwd_Reset_Register_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 029: Check resest email with register email</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_030_ForgotPwd_Unregister_Email()'><b>TC_030_ForgotPwd_Unregister_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 030: Check match email</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_033_Check_Cancel_Button()'><b>TC_033_Check_Cancel_Button</b><br>Test class: Login.LoginTest<br>Test method: TC 033: Check Cancel button</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_034_RestPwd_with_validPwd()'><b>TC_034_RestPwd_with_validPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 034: Check valid value of password and password confirmation</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_035_RestPwd_with_InvalidPwd()'><b>TC_035_RestPwd_with_InvalidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 035: Check invalid value of password and password confirmation</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_036_Reset_Pwd_without_Input()'><b>TC_036_Reset_Pwd_without_Input</b><br>Test class: Login.LoginTest<br>Test method: TC 036: Check user doesn't input password and and password confirmation</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_038_Reset_Pwd_with_ValidPwd()'><b>TC_038_Reset_Pwd_with_ValidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 038: Check user inputs valid password and password confirmation</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_039_Reset_Pwd_with_ValidValue_2times()'><b>TC_039_Reset_Pwd_with_ValidValue_2times</b><br>Test class: Login.LoginTest<br>Test method: TC 039: Check user inputs valid password and password confirmation 2 times</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_040_Reset_Pwd_with_Pwdlessthan8cha()'><b>TC_040_Reset_Pwd_with_Pwdlessthan8cha</b><br>Test class: Login.LoginTest<br>Test method: TC 040: Check user inputs less than 8 characters</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_041_Reset_Pwd_with_ValidPwd()'><b>TC_041_Reset_Pwd_with_ValidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 041: Check user inputs from 8 to 15 characters</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_042_Reset_Pwd_with_Pwdmorethan15cha()'><b>TC_042_Reset_Pwd_with_Pwdmorethan15cha</b><br>Test class: Login.LoginTest<br>Test method: TC 042: Check user inputs more than 15 characters</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_043_Reset_Pwd_with_PwdisNotSame()'><b>TC_043_Reset_Pwd_with_PwdisNotSame</b><br>Test class: Login.LoginTest<br>Test method: TC 043: Check password and password confirmation are not the same</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_044_Reset_Pwd_with_PwdisSame()'><b>TC_044_Reset_Pwd_with_PwdisSame</b><br>Test class: Login.LoginTest<br>Test method: TC 044: Check password and password confirmation are the same</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@74294adb</td></tr>
+</table><p>
+</body>
+</html>

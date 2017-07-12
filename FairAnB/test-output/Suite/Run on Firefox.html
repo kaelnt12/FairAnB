@@ -1,0 +1,964 @@
+<html>
+<head>
+<title>TestNG:  Run on Firefox</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Run on Firefox</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 22 10:45:09 ICT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>408 seconds (408181 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Login.LoginTest.TC_020_LogIn_BranchAccount()'><b>TC_020_LogIn_BranchAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 020: Check incase login branch account <br/>
+<a href="#Output-376725601" onClick='toggleBox("Output-376725601", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-376725601" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-376725601">
+2017-05-22 10:46:11,281 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:46:12,183 INFO  LoginTest - Step 02: Input Admin ID
+<br/>
+2017-05-22 10:46:12,283 INFO  LoginTest - Step 03: Input Admin Pwd
+<br/>
+2017-05-22 10:46:12,384 INFO  LoginTest - Step 04: Click login button
+<br/>
+2017-05-22 10:46:14,937 INFO  LoginTest - VP 01.Login with Company account
+<br/>
+2017-05-22 10:46:45,109 INFO  LoginTest - ==Verify condition is FAILED==
+<br/>
+2017-05-22 10:46:45,110 INFO  LoginTest - Step 05: LogOut
+<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}
+Command duration or timeout: 15.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b06a9689-77ae-4901-a18a-d08772cd9049
+*** Element info: {Using=xpath, value=//a[@href=&apos;/logout&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at common.AutomationControl.findElement(AutomationControl.java:14)
+	at common.AbstractPage.waitForElement(AbstractPage.java:70)
+	at page.DashboardPage.logOut(DashboardPage.java:37)
+	at Login.LoginTest.TC_020_LogIn_BranchAccount(LoginTest.java:319)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous7524308285890096022webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous7524308285890096022webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace376725601", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace376725601'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}
+Command duration or timeout: 15.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b06a9689-77ae-4901-a18a-d08772cd9049
+*** Element info: {Using=xpath, value=//a[@href=&apos;/logout&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at common.AutomationControl.findElement(AutomationControl.java:14)
+	at common.AbstractPage.waitForElement(AbstractPage.java:70)
+	at page.DashboardPage.logOut(DashboardPage.java:37)
+	at Login.LoginTest.TC_020_LogIn_BranchAccount(LoginTest.java:319)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/logout&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;QuocBao&apos;, ip: &apos;192.168.195.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous7524308285890096022webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASIANT~1/AppData/Local/Temp/anonymous7524308285890096022webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>48</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_027_ForgotPwd_Invalid_Email()'><b>TC_027_ForgotPwd_Invalid_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 027: Check user inputs invalid email<br/>
+<a href="#Output-435914790" onClick='toggleBox("Output-435914790", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-435914790" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-435914790">
+2017-05-22 10:47:08,192 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:47:08,880 INFO  LoginTest - Step 02: Input Invalid Email
+<br/>
+2017-05-22 10:47:08,981 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:47:11,597 INFO  LoginTest - VP 01. 'このメールアドレスに一致するユーザーを見つけることが出来ませんでした。' message is displayed
+<br/>
+2017-05-22 10:47:41,860 INFO  LoginTest - ==Verify condition is FAILED==
+<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at common.AbstractTest.verifyTrue(AbstractTest.java:40)
+	at common.AbstractTest.verifyTrue(AbstractTest.java:55)
+	at Login.LoginTest.TC_027_ForgotPwd_Invalid_Email(LoginTest.java:371)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace435914790", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace435914790'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at common.AbstractTest.verifyTrue(AbstractTest.java:40)
+	at common.AbstractTest.verifyTrue(AbstractTest.java:55)
+	at Login.LoginTest.TC_027_ForgotPwd_Invalid_Email(LoginTest.java:371)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+</pre></div></td>
+<td>33</td>
+<td>Login.LoginTest@6572421</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Login.LoginTest.TC_002_Title_Login_Screen()'><b>TC_002_Title_Login_Screen</b><br>Test class: Login.LoginTest<br>Test method: TC 002: Check the display title of [login screen] page <br/>
+<a href="#Output-589987187" onClick='toggleBox("Output-589987187", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-589987187" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-589987187">
+2017-05-22 10:45:20,083 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:20,086 INFO  LoginTest - VP. Verify that the title is 'カラダかわるNavi Management System'
+<br/>
+2017-05-22 10:45:20,190 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_003_No_ID_and_No_Password()'><b>TC_003_No_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 003: Check user doesn't input ID and password<br/>
+<a href="#Output-1166106620" onClick='toggleBox("Output-1166106620", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1166106620" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1166106620">
+2017-05-22 10:45:20,198 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:20,631 INFO  LoginTest - Step 02: Click Login button without input ID, password
+<br/>
+2017-05-22 10:45:23,382 INFO  LoginTest - VP 01. 'ログインIDは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:23,549 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+2017-05-22 10:45:23,550 INFO  LoginTest - VP 02. 'パスワードは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:23,588 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_004_Vaid_ID_and_No_Password()'><b>TC_004_Vaid_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 004: Check user inputs valid ID and doesn't input password<br/>
+<a href="#Output-1863655430" onClick='toggleBox("Output-1863655430", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1863655430" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1863655430">
+2017-05-22 10:45:23,590 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:24,006 INFO  LoginTest - Step 02: Input valid ID
+<br/>
+2017-05-22 10:45:25,107 INFO  LoginTest - Step 03: Click Login button with valid ID and doesn't input password
+<br/>
+2017-05-22 10:45:27,662 INFO  LoginTest - VP 01. 'パスワードは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:27,703 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_005_No_ID_and_Valid_Password()'><b>TC_005_No_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 005: Check user doesn't input ID and inputs valid password<br/>
+<a href="#Output-2052457859" onClick='toggleBox("Output-2052457859", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2052457859" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2052457859">
+2017-05-22 10:45:27,707 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:28,154 INFO  LoginTest - Step 02: Input valid Pwd
+<br/>
+2017-05-22 10:45:28,309 INFO  LoginTest - Step 03: Click Login button with doesn't input ID and valid password
+<br/>
+2017-05-22 10:45:30,878 INFO  LoginTest - VP 01. 'ログインIDは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:30,964 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_006_Invaid_ID_and_No_Password()'><b>TC_006_Invaid_ID_and_No_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 006: Check user inputs invalid ID and doesn't input password<br/>
+<a href="#Output-1275028674" onClick='toggleBox("Output-1275028674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1275028674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1275028674">
+2017-05-22 10:45:30,967 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:31,413 INFO  LoginTest - Step 02: Input invalid ID
+<br/>
+2017-05-22 10:45:31,583 INFO  LoginTest - Step 03: Click Login button with valid ID and doesn't input password
+<br/>
+2017-05-22 10:45:34,529 INFO  LoginTest - VP 01. 'パスワードは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:34,669 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_007_No_ID_and_Invalid_Password()'><b>TC_007_No_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 007: Check user doesn't input ID and inputs invalid password<br/>
+<a href="#Output-1110698130" onClick='toggleBox("Output-1110698130", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1110698130" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1110698130">
+2017-05-22 10:45:34,671 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:35,412 INFO  LoginTest - Step 02: Input valid Pwd
+<br/>
+2017-05-22 10:45:35,630 INFO  LoginTest - Step 03: Click Login button with doesn't input ID and valid password
+<br/>
+2017-05-22 10:45:38,379 INFO  LoginTest - VP 01. 'ログインIDは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:45:38,457 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_008_Valid_ID_and_Invalid_Password()'><b>TC_008_Valid_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 008: Check user inputs valid ID and invalid password<br/>
+<a href="#Output-937277082" onClick='toggleBox("Output-937277082", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-937277082" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-937277082">
+2017-05-22 10:45:38,461 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:39,809 INFO  LoginTest - Step 02: Input valid ID
+<br/>
+2017-05-22 10:45:39,935 INFO  LoginTest - Step 03: Input invalid Pwd
+<br/>
+2017-05-22 10:45:40,053 INFO  LoginTest - Step 04: Click Login button with valid ID and invalid password
+<br/>
+2017-05-22 10:45:42,672 INFO  LoginTest - VP 01. '認証情報と一致するレコードがありません。' message is displayed
+<br/>
+2017-05-22 10:45:42,774 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_009_Invalid_ID_and_Valid_Password()'><b>TC_009_Invalid_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 009: Check user inputs invalid ID and valid password<br/>
+<a href="#Output-399373008" onClick='toggleBox("Output-399373008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-399373008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-399373008">
+2017-05-22 10:45:42,782 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:43,336 INFO  LoginTest - Step 02: Input valid ID
+<br/>
+2017-05-22 10:45:43,461 INFO  LoginTest - Step 03: Input invalid Pwd
+<br/>
+2017-05-22 10:45:43,604 INFO  LoginTest - Step 04: Click Login button with invalid ID and valid password
+<br/>
+2017-05-22 10:45:46,174 INFO  LoginTest - VP 01. '認証情報と一致するレコードがありません。' message is displayed
+<br/>
+2017-05-22 10:45:46,259 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_010_Invalid_ID_and_Invalid_Password()'><b>TC_010_Invalid_ID_and_Invalid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 010: Check user inputs invalid ID and invalid password<br/>
+<a href="#Output-1768882706" onClick='toggleBox("Output-1768882706", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1768882706" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1768882706">
+2017-05-22 10:45:46,261 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:46,803 INFO  LoginTest - Step 02: Input valid ID
+<br/>
+2017-05-22 10:45:46,905 INFO  LoginTest - Step 03: Input invalid Pwd
+<br/>
+2017-05-22 10:45:47,006 INFO  LoginTest - Step 04: Click Login button with invalid ID and valid password
+<br/>
+2017-05-22 10:45:50,198 INFO  LoginTest - VP 01. '認証情報と一致するレコードがありません。' message is displayed
+<br/>
+2017-05-22 10:45:50,292 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_011_Valid_ID_and_Valid_Password()'><b>TC_011_Valid_ID_and_Valid_Password</b><br>Test class: Login.LoginTest<br>Test method: TC 011: Check user input valid ID and valid password<br/>
+<a href="#Output-1545077099" onClick='toggleBox("Output-1545077099", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1545077099" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1545077099">
+2017-05-22 10:45:50,294 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:50,756 INFO  LoginTest - Step 02: Input valid ID
+<br/>
+2017-05-22 10:45:50,882 INFO  LoginTest - Step 03: Input valid Pwd
+<br/>
+2017-05-22 10:45:50,988 INFO  LoginTest - Step 04: Click Login button with invalid ID and valid password
+<br/>
+2017-05-22 10:45:58,310 INFO  LoginTest - VP 01. Come to Dashboard screen
+<br/>
+2017-05-22 10:45:58,424 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+2017-05-22 10:45:58,425 INFO  LoginTest - Log Out
+<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_017_Check_Forgot_Pwd_function()'><b>TC_017_Check_Forgot_Pwd_function</b><br>Test class: Login.LoginTest<br>Test method: TC 017: Check ログインID/パスワードを忘れた場合は？ button<br/>
+<a href="#Output-1927963027" onClick='toggleBox("Output-1927963027", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1927963027" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1927963027">
+2017-05-22 10:45:58,665 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:45:58,698 INFO  LoginTest - Step 02: Click Forgot Password button
+<br/>
+2017-05-22 10:46:01,665 INFO  LoginTest - VP 01. Verify Forgot Password Page appears
+<br/>
+2017-05-22 10:46:01,747 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_018_LogIn_AdminAccount()'><b>TC_018_LogIn_AdminAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 018: Check incase login by admin account<br/>
+<a href="#Output-106297322" onClick='toggleBox("Output-106297322", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-106297322" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-106297322">
+2017-05-22 10:46:01,748 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:46:02,218 INFO  LoginTest - Step 02: Input Admin ID
+<br/>
+2017-05-22 10:46:02,353 INFO  LoginTest - Step 03: Input Admin Pwd
+<br/>
+2017-05-22 10:46:02,491 INFO  LoginTest - Step 04: Click login button
+<br/>
+2017-05-22 10:46:05,812 INFO  LoginTest - VP 01.Login with admin account
+<br/>
+2017-05-22 10:46:05,903 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+2017-05-22 10:46:05,903 INFO  LoginTest - Step 05: LogOut
+<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_019_LogIn_CompnayAccount()'><b>TC_019_LogIn_CompnayAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 019: Check incase login by company account <br/>
+<a href="#Output-1493042329" onClick='toggleBox("Output-1493042329", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1493042329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1493042329">
+2017-05-22 10:46:06,901 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:46:07,354 INFO  LoginTest - Step 02: Input Admin ID
+<br/>
+2017-05-22 10:46:07,467 INFO  LoginTest - Step 03: Input Admin Pwd
+<br/>
+2017-05-22 10:46:07,573 INFO  LoginTest - Step 04: Click login button
+<br/>
+2017-05-22 10:46:10,585 INFO  LoginTest - VP 01.Login with Company account
+<br/>
+2017-05-22 10:46:10,678 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+2017-05-22 10:46:10,678 INFO  LoginTest - Step 05: LogOut
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_021_LogIn_AgentAccount()'><b>TC_021_LogIn_AgentAccount</b><br>Test class: Login.LoginTest<br>Test method: TC 021: Check incase login by agent account <br/>
+<a href="#Output-1086849943" onClick='toggleBox("Output-1086849943", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1086849943" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1086849943">
+2017-05-22 10:47:00,283 INFO  LoginTest - Step 01: Come to login screen
+<br/>
+2017-05-22 10:47:00,951 INFO  LoginTest - Step 02: Input Admin ID
+<br/>
+2017-05-22 10:47:01,056 INFO  LoginTest - Step 03: Input Admin Pwd
+<br/>
+2017-05-22 10:47:01,165 INFO  LoginTest - Step 04: Click login button
+<br/>
+2017-05-22 10:47:04,455 INFO  LoginTest - VP 01.Login with Agent account
+<br/>
+2017-05-22 10:47:04,541 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+2017-05-22 10:47:04,541 INFO  LoginTest - Step 05: LogOut
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_026_ForgotPwd_Without_Email()'><b>TC_026_ForgotPwd_Without_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 026: Check user doesn't input email<br/>
+<a href="#Output-259251414" onClick='toggleBox("Output-259251414", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-259251414" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-259251414">
+2017-05-22 10:47:05,241 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:47:05,628 INFO  LoginTest - Step 02: Click Reset button
+<br/>
+2017-05-22 10:47:08,132 INFO  LoginTest - VP 01. 'メールは、必ず指定してください。' message is displayed
+<br/>
+2017-05-22 10:47:08,190 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_028_ForgotPwd_Valid_Email()'><b>TC_028_ForgotPwd_Valid_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 028: Check user inputs valid email<br/>
+<a href="#Output-911501858" onClick='toggleBox("Output-911501858", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-911501858" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-911501858">
+2017-05-22 10:47:41,866 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:47:42,223 INFO  LoginTest - Step 02: Input Valid Email
+<br/>
+2017-05-22 10:47:42,337 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:47:44,928 INFO  LoginTest - VP 01. Come to 送信完了 screen 
+<br/>
+2017-05-22 10:47:44,958 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_029_ForgotPwd_Reset_Register_Email()'><b>TC_029_ForgotPwd_Reset_Register_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 029: Check resest email with register email<br/>
+<a href="#Output-1456061400" onClick='toggleBox("Output-1456061400", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1456061400" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1456061400">
+2017-05-22 10:47:44,960 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:47:45,318 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:47:45,425 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:47:51,608 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:48:24,354 INFO  LoginTest - Step 05: SignIn emaiil
+<br/>
+2017-05-22 10:48:30,396 INFO  LoginTest - VP 01. Verify Receive Email
+<br/>
+2017-05-22 10:48:30,892 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_030_ForgotPwd_Unregister_Email()'><b>TC_030_ForgotPwd_Unregister_Email</b><br>Test class: Login.LoginTest<br>Test method: TC 030: Check match email<br/>
+<a href="#Output-1149407083" onClick='toggleBox("Output-1149407083", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1149407083" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1149407083">
+2017-05-22 10:48:31,156 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:48:31,778 INFO  LoginTest - Step 02: Input Valid Email
+<br/>
+2017-05-22 10:48:31,938 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:48:35,108 INFO  LoginTest - VP 01. 'このメールアドレスに一致するユーザーを見つけることが出来ませんでした。' message is displayed
+<br/>
+2017-05-22 10:48:35,220 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_033_Check_Cancel_Button()'><b>TC_033_Check_Cancel_Button</b><br>Test class: Login.LoginTest<br>Test method: TC 033: Check Cancel button<br/>
+<a href="#Output-870322840" onClick='toggleBox("Output-870322840", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-870322840" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-870322840">
+2017-05-22 10:48:35,222 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:48:35,849 INFO  LoginTest - Step 02: Click Cancel button
+<br/>
+2017-05-22 10:48:36,376 INFO  LoginTest - VP 01. Verify that come to LogIn page
+<br/>
+2017-05-22 10:48:36,427 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_034_RestPwd_with_validPwd()'><b>TC_034_RestPwd_with_validPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 034: Check valid value of password and password confirmation<br/>
+<a href="#Output-1166230227" onClick='toggleBox("Output-1166230227", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1166230227" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1166230227">
+2017-05-22 10:48:36,429 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:48:36,699 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:48:36,836 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:48:42,369 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:48:47,131 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:48:51,147 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:48:52,111 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:48:55,064 INFO  LoginTest - Step 08: Change password with valid value
+<br/>
+2017-05-22 10:48:55,356 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:49:01,746 INFO  LoginTest - VP 01. Verify Password is changed
+<br/>
+2017-05-22 10:49:01,848 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_035_RestPwd_with_InvalidPwd()'><b>TC_035_RestPwd_with_InvalidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 035: Check invalid value of password and password confirmation<br/>
+<a href="#Output-1705665942" onClick='toggleBox("Output-1705665942", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1705665942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1705665942">
+2017-05-22 10:49:02,036 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:49:02,073 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:49:02,821 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:49:08,421 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:49:13,719 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:49:19,665 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:49:19,852 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:49:22,827 INFO  LoginTest - Step 08: Change password with invalid value
+<br/>
+2017-05-22 10:49:23,137 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:49:28,695 INFO  LoginTest - VP 01. Verify Error message is displayed
+<br/>
+2017-05-22 10:49:28,789 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_036_Reset_Pwd_without_Input()'><b>TC_036_Reset_Pwd_without_Input</b><br>Test class: Login.LoginTest<br>Test method: TC 036: Check user doesn't input password and and password confirmation<br/>
+<a href="#Output-976358110" onClick='toggleBox("Output-976358110", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-976358110" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-976358110">
+2017-05-22 10:49:28,792 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:49:29,216 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:49:29,405 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:49:35,334 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:49:39,275 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:49:43,354 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:49:43,537 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:49:46,673 INFO  LoginTest - Step 08: Reset Password
+<br/>
+2017-05-22 10:49:52,498 INFO  LoginTest - VP 01. 'このメールアドレスに一致するユーザーを見つけることが出来ませんでした。' message is displayed
+<br/>
+2017-05-22 10:49:52,577 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_038_Reset_Pwd_with_ValidPwd()'><b>TC_038_Reset_Pwd_with_ValidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 038: Check user inputs valid password and password confirmation<br/>
+<a href="#Output-1023996917" onClick='toggleBox("Output-1023996917", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1023996917" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1023996917">
+2017-05-22 10:49:52,579 INFO  LoginTest - Step 01: Check user inputs valid password and password confirmation
+<br/>
+2017-05-22 10:49:52,579 INFO  LoginTest - VP 01. Password is changed
+<br/>
+2017-05-22 10:49:52,580 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_039_Reset_Pwd_with_ValidValue_2times()'><b>TC_039_Reset_Pwd_with_ValidValue_2times</b><br>Test class: Login.LoginTest<br>Test method: TC 039: Check user inputs valid password and password confirmation 2 times<br/>
+<a href="#Output-1970073944" onClick='toggleBox("Output-1970073944", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1970073944" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1970073944">
+2017-05-22 10:49:52,581 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:49:52,890 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:49:53,042 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:49:58,805 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:50:02,058 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:50:07,320 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:50:08,057 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:50:11,589 INFO  LoginTest - Step 08: Input new password with valid value
+<br/>
+2017-05-22 10:50:11,873 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:50:18,448 INFO  LoginTest - Step 10: LogOut
+<br/>
+2017-05-22 10:50:18,825 INFO  LoginTest - Step 11: Open Mailinator Page-2
+<br/>
+2017-05-22 10:50:24,390 INFO  LoginTest - Step 12: SignIn email -2
+<br/>
+2017-05-22 10:50:31,371 INFO  LoginTest - Step 13: Open Reset Password mail -2
+<br/>
+2017-05-22 10:50:31,651 INFO  LoginTest - Step 14: Go to Reset Password page -2
+<br/>
+2017-05-22 10:50:34,491 INFO  LoginTest - Step 15: Input new password with valid value -2
+<br/>
+2017-05-22 10:50:34,841 INFO  LoginTest - Step 16: Reset Password -2
+<br/>
+2017-05-22 10:50:40,785 INFO  LoginTest - VP 01. 'このパスワードリセットトークンは無効です。' message is displayed
+<br/>
+2017-05-22 10:50:40,891 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_040_Reset_Pwd_with_Pwdlessthan8cha()'><b>TC_040_Reset_Pwd_with_Pwdlessthan8cha</b><br>Test class: Login.LoginTest<br>Test method: TC 040: Check user inputs less than 8 characters<br/>
+<a href="#Output-1926027290" onClick='toggleBox("Output-1926027290", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1926027290" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1926027290">
+2017-05-22 10:50:40,893 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:50:41,249 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:50:41,374 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:50:46,820 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:50:50,939 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:50:55,054 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:50:55,225 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:50:58,091 INFO  LoginTest - Step 08: Input new password with valid value
+<br/>
+2017-05-22 10:50:58,438 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:51:04,019 INFO  LoginTest - VP 01. 'パスワードは、8文字以上にしてください。。' message is displayed
+<br/>
+2017-05-22 10:51:04,102 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_041_Reset_Pwd_with_ValidPwd()'><b>TC_041_Reset_Pwd_with_ValidPwd</b><br>Test class: Login.LoginTest<br>Test method: TC 041: Check user inputs from 8 to 15 characters<br/>
+<a href="#Output-1958592872" onClick='toggleBox("Output-1958592872", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1958592872" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1958592872">
+2017-05-22 10:51:04,103 INFO  LoginTest - Step 01: Check user inputs from 8 to 15 characters
+<br/>
+2017-05-22 10:51:04,104 INFO  LoginTest - VP 01. Password is changed
+<br/>
+2017-05-22 10:51:04,104 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_042_Reset_Pwd_with_Pwdmorethan15cha()'><b>TC_042_Reset_Pwd_with_Pwdmorethan15cha</b><br>Test class: Login.LoginTest<br>Test method: TC 042: Check user inputs more than 15 characters<br/>
+<a href="#Output-67671827" onClick='toggleBox("Output-67671827", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-67671827" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-67671827">
+2017-05-22 10:51:04,105 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:51:04,448 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:51:04,715 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:51:10,103 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:51:16,758 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:51:21,001 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:51:21,491 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:51:25,079 INFO  LoginTest - Step 08: Input new password with valid value
+<br/>
+2017-05-22 10:51:25,486 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:51:30,993 INFO  LoginTest - VP 01. 'パスワードは、15文字以下にしてください。' message is displayed
+<br/>
+2017-05-22 10:51:31,105 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>27</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_043_Reset_Pwd_with_PwdisNotSame()'><b>TC_043_Reset_Pwd_with_PwdisNotSame</b><br>Test class: Login.LoginTest<br>Test method: TC 043: Check password and password confirmation are not the same<br/>
+<a href="#Output-707635461" onClick='toggleBox("Output-707635461", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-707635461" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-707635461">
+2017-05-22 10:51:31,107 INFO  LoginTest - Step 01: Come to Reset screen
+<br/>
+2017-05-22 10:51:31,464 INFO  LoginTest - Step 02: Input Registered Email
+<br/>
+2017-05-22 10:51:31,589 INFO  LoginTest - Step 03: Click Reset button
+<br/>
+2017-05-22 10:51:37,147 INFO  LoginTest - Step 04: Open Mailinator Page
+<br/>
+2017-05-22 10:51:42,517 INFO  LoginTest - Step 05: SignIn email
+<br/>
+2017-05-22 10:51:46,725 INFO  LoginTest - Step 06: Open Reset Password mail
+<br/>
+2017-05-22 10:51:47,064 INFO  LoginTest - Step 07: Go to Reset Password page
+<br/>
+2017-05-22 10:51:50,030 INFO  LoginTest - Step 08: Input new password with valid value
+<br/>
+2017-05-22 10:51:50,373 INFO  LoginTest - Step 09: Reset Password
+<br/>
+2017-05-22 10:51:55,983 INFO  LoginTest - VP 01. 'パスワード確認とパスワードが一致しません。' message is displayed
+<br/>
+2017-05-22 10:51:56,136 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>Login.LoginTest@6572421</td></tr>
+<tr>
+<td title='Login.LoginTest.TC_044_Reset_Pwd_with_PwdisSame()'><b>TC_044_Reset_Pwd_with_PwdisSame</b><br>Test class: Login.LoginTest<br>Test method: TC 044: Check password and password confirmation are the same<br/>
+<a href="#Output-1095947149" onClick='toggleBox("Output-1095947149", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1095947149" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1095947149">
+2017-05-22 10:51:56,142 INFO  LoginTest - Step 01: Check password and password confirmation are the same
+<br/>
+2017-05-22 10:51:56,143 INFO  LoginTest - VP 01. Password is changed
+<br/>
+2017-05-22 10:51:56,143 INFO  LoginTest - ==Verify condition is PASSED==
+<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>Login.LoginTest@6572421</td></tr>
+</table><p>
+</body>
+</html>
