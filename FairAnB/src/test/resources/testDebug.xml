@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
 
-	<test name="Run on Safari">
+	<test name="Run on Chrome">
 		<listeners>
 			<listener class-name="common.ExtentTestNGITestListener" />
 			<listener class-name="common.ExtentTestNGIReporterListener" />

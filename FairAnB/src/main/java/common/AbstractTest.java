@@ -111,7 +111,7 @@ public class AbstractTest {
 		BrowserManager br = new BrowserManager();
 		WebDriver driver = br.openBrowser(browser, url);
 		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("firefox")
-				|| driver.toString().toLowerCase().contains("internetexplorer") || driver.toString().toLowerCase().contains("safari")) {
+				|| driver.toString().toLowerCase().contains("internetexplorer")) {
 			driver.manage().window().maximize();
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.focus();");
@@ -121,25 +121,11 @@ public class AbstractTest {
 		return driver;
 	}
 
-	public WebDriver openBrowserWithOldCookies(String browser, String url) {
-		BrowserManager br = new BrowserManager();
-		WebDriver driver = br.openBrowserWithOldCookies(browser, url);
-		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("firefox")
-				|| driver.toString().toLowerCase().contains("internetexplorer") || driver.toString().toLowerCase().contains("safari")) {
-			driver.manage().window().maximize();
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.focus();");
-		}
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		return driver;
-	}
-	
 	public void openFolder(String browser, String folderName) {
 			final String dir = System.getProperty("user.home");
 			String folderPath = dir + "\\"+folderName;
 			navigateToURL(folderPath);
 		}
-	
 
 	public void navigateToURL(String URL){
 		driver.get(URL);

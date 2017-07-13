@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariDriverService;
+import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BrowserManager {
@@ -20,22 +22,33 @@ public class BrowserManager {
 	private WebDriver driver;
 
 	public WebDriver openBrowser(String browser, String url) {
-		try {
-			if (browser.toString().toLowerCase().contains("chrome")) {
-				DesiredCapabilities cap = startChromeDriver();
-				driver = new ChromeDriver(cap);
-			} else if (browser.toString().toLowerCase().contains("ie")) {
-				startIEDriver();
-				driver = new InternetExplorerDriver();
-			} else if (browser.toString().toLowerCase().contains("firefox")) {
-				startFFDriver();
-				driver = new FirefoxDriver();
-			} else if (browser.toString().toLowerCase().contains("safari")) {
-				startSafariDriver();
-				driver = new SafariDriver();
+		if (!os().contains("mac")) {
+			try {
+				if (browser.toString().toLowerCase().contains("chrome")) {
+					DesiredCapabilities cap = startChromeDriver();
+					driver = new ChromeDriver(cap);
+				} else if (browser.toString().toLowerCase().contains("ie")) {
+					startIEDriver();
+					driver = new InternetExplorerDriver();
+				} else if (browser.toString().toLowerCase().contains("firefox")) {
+					startFFDriver();
+					driver = new FirefoxDriver();
+				}
+			} catch (Exception e) {
+				System.out.println("No browser was found");
 			}
-		} catch (Exception e) {
-			System.out.println("No browser was found");
+		} else if (os().contains("mac")) {
+			try {
+				if (browser.toString().toLowerCase().contains("chrome")) {
+					driver = new ChromeDriver();
+				} else if (browser.toString().toLowerCase().contains("firefox")) {
+					driver = new FirefoxDriver();
+				} else if (browser.toString().toLowerCase().contains("safari")) {
+					driver = new SafariDriver();
+				}
+			} catch (Exception e) {
+				System.out.println("No browser was found");
+			}
 		}
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -48,8 +61,6 @@ public class BrowserManager {
 		}
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.focus();");
-
-		System.out.println(driver);
 		return driver;
 
 	}
@@ -85,18 +96,18 @@ public class BrowserManager {
 			e.printStackTrace();
 		}
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.resizeTo(1368,768);");
 		js.executeScript("window.focus();");
 
 		System.out.println(driver);
 		return driver;
-
 	}
 
 	public DesiredCapabilities startChromeDriver() {
 		if (os().contains("win")) {
 			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
 		} else if (os().contains("mac")) {
-			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
 		}
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions options = new ChromeOptions();
@@ -120,8 +131,17 @@ public class BrowserManager {
 		System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\geckodriver.exe");
 	}
 
-	public void startSafariDriver() {
-		System.setProperty("webdriver.safari.noinstall", "true"); // To stop uninstall each time
+	public SafariOptions startSafariDriver() {
+		SafariOptions options = new SafariOptions();
+		options.setUseCleanSession(true);
+		options.getUseTechnologyPreview();
+		return options;
+	}
+
+	public SafariDriverService safariService() {
+		SafariOptions options = startSafariDriver();
+		SafariDriverService ser = SafariDriverService.createDefaultService(options);
+		return ser;
 	}
 
 	public WebDriver getDriver() {

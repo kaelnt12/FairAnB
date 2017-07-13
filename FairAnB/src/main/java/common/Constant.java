@@ -6,7 +6,7 @@ import common.CommonAction;
 
 public class Constant extends CommonAction{
 	//---------------------------------FairAnB------------------------------------//
-	public static final String URL = "http://fairanb.com/";
+	public static final String URL = "http://fairanb.com:8080/";
 
 	
 	//---------------------------------Driver pack------------------------------------//
