@@ -48,6 +48,14 @@ public class DashboardPage extends AbstractPage{
 	}
 	
 	/**
+	 * Click Register Link
+	 */
+	public void clickRegisterLink() {
+		waitForElement(driver, interfaces.AbstractPage.REGISTER_LINK, timeWaits);
+		click(driver, interfaces.AbstractPage.REGISTER_LINK);
+	}
+	
+	/**
 	 * Is My Account Button Displayed
 	 * @return
 	 */

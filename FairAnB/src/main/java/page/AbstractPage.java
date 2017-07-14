@@ -507,5 +507,16 @@ public class AbstractPage {
 		driver.switchTo().defaultContent();
 	}
 	
+	/**
+	 * Is Dynamic Header Displayed
+	 * @param value
+	 * @return
+	 */
+	public boolean isDynamicHeaderDisplayed(String value) {
+		waitForElement(driver, interfaces.AbstractPage.DYNAMIC_PAGE_HEADER, value, timeWaits);
+		return isControlDisplayed(driver, interfaces.AbstractPage.DYNAMIC_PAGE_HEADER, value);
+	}
+	
 	WebDriver driver;
+	int timeWaits = Constant.TimeWait;
 }
