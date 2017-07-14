@@ -32,8 +32,8 @@ public class S001_Login extends AbstractTest {
 		myAccountHeader = "My Account";
 		firstName = faker.name().firstName();
 		lastName = faker.name().lastName();
-		state = "California";
-		gender = "male";
+		state = "Alabama";
+		gender = "Male";
 		country = "United States";
 		email = firstName + CommonAction.getCommon().getRandomNumber() + "@gmail.com";
 		username = firstName + lastName + CommonAction.getCommon().getRandomNumber();
@@ -66,7 +66,7 @@ public class S001_Login extends AbstractTest {
 		register.selectCountry(country);
 		
 		log.info("Step 08: Input State");
-		register.selectState(state);
+		register.inputState(state);
 		
 		log.info("Step 09: Input Email Address");
 		register.inputEmailAddress(email);
@@ -90,18 +90,18 @@ public class S001_Login extends AbstractTest {
 		account.clickMyAccountInformationLink();
 		
 		log.info("VP 03. Verify Email, FirstName, LastName, Gender are the same as registered");
-		verifyEquals(account.getDynamicMyAccountInformation("email"), email);
-		verifyEquals(account.getDynamicMyAccountInformation("First Name"), firstName);
-		verifyEquals(account.getDynamicMyAccountInformation("Last Name"), lastName);
-		verifyEquals(account.getDynamicMyAccountInformation("Gender"), gender.charAt(0));
+		verifyEquals(account.getDynamicMyAccountInformation("email"), email.toLowerCase());
+		verifyEquals(account.getDynamicMyAccountInformation("First Name"), firstName.toLowerCase());
+		verifyEquals(account.getDynamicMyAccountInformation("Last Name"), lastName.toLowerCase());
+		verifyEquals(account.getDynamicMyAccountInformation("Gender"), gender.toLowerCase().subSequence(0, 1));
 		
 		log.info("Step 15: Click Billing & Shipping Information link");
-		account.clickBillingShippingInformationLink();
+//		account.clickBillingShippingInformationLink();
 		
 //		log.info("VP 04. Verify Country, State, ");
 	}
 
-	@Test
+	@Test (enabled = false)
 	public void S001_Login_TC002_Verify_Login_Function() {
 		log.info("Step 01: Click Login Drop");
 		dashboard.clickLoginDrop();

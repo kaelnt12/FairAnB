@@ -17,6 +17,7 @@ public class MyAccountPage extends AbstractPage{
 	public void clickMyAccountInformationLink() {
 		waitForElement(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION_LINK, timeWaits);
 		click(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION_LINK);
+		sleep(2);
 	}
 	
 	/**
@@ -25,6 +26,7 @@ public class MyAccountPage extends AbstractPage{
 	public void clickBillingShippingInformationLink() {
 		waitForElement(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_LINK, timeWaits);
 		click(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_LINK);
+		sleep(2);
 	}
 	
 	/**
@@ -33,6 +35,7 @@ public class MyAccountPage extends AbstractPage{
 	public void clickLogOutButton() {
 		waitForElement(driver, interfaces.MyAccountPage.LOG_OUT_LINK, timeWaits);
 		click(driver, interfaces.MyAccountPage.LOG_OUT_LINK);
+		sleep(2);
 	}
 	
 	/**
@@ -43,11 +46,13 @@ public class MyAccountPage extends AbstractPage{
 	public String getDynamicMyAccountInformation(String value) {
 		waitForElement(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION, timeWaits);
 		String returnValue = null;
-		String accountInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION, "innerText").split("/n");
-		for(int i = 0; i < accountInfo.length; i++) {
+		String accountInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION, "innerText").split("\n");
+		for(int i = 0; i < accountInfo.length - 1; i++) {
 			if(accountInfo[i].toLowerCase().contains(value.toLowerCase())) {
-				String sentenceInfo[] = accountInfo[i].split(": ");
-				returnValue = sentenceInfo[1];
+				returnValue =accountInfo[i].toLowerCase()
+						.replace(value.toLowerCase(), "")
+						.replace(": ", "")
+						.replace(" ", "");
 			}
 		}
 		return returnValue;
