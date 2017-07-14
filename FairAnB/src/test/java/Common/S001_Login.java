@@ -75,7 +75,7 @@ public class S001_Login extends AbstractTest {
 
 	@AfterClass(alwaysRun = true)
 	public void tearsDown() {
-//		closeBrowser();
+		closeBrowser();
 	}
 	DashboardPage dashboard;
 	String validUsername, validPassword, invalidUsername, invalidPassword;
