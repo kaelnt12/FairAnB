@@ -15,8 +15,8 @@ public class DashboardPage extends AbstractPage{
 	 * Input User Name
 	 */
 	public void inputUserName(String value) {
-		waitForElement(driver, interfaces.DashboardPage.USERNAME_TEXTBOX, timeWaits);
-		type(driver, interfaces.DashboardPage.USERNAME_TEXTBOX, value);
+		waitForElement(driver, interfaces.AbstractPage.USERNAME_TEXTBOX, timeWaits);
+		type(driver, interfaces.AbstractPage.USERNAME_TEXTBOX, value);
 		sleep(1);
 	}
 	
@@ -25,8 +25,8 @@ public class DashboardPage extends AbstractPage{
 	 * @param value
 	 */
 	public void inputPassword(String value) {
-		waitForElement(driver, interfaces.DashboardPage.PASSWORD_TEXTBOX, timeWaits);
-		type(driver, interfaces.DashboardPage.PASSWORD_TEXTBOX, value);
+		waitForElement(driver, interfaces.AbstractPage.PASSWORD_TEXTBOX, timeWaits);
+		type(driver, interfaces.AbstractPage.PASSWORD_TEXTBOX, value);
 		sleep(1);
 	}
 	
@@ -34,18 +34,17 @@ public class DashboardPage extends AbstractPage{
 	 * Click Login Button
 	 */
 	public void clickLoginButton() {
-		waitForElement(driver, interfaces.DashboardPage.LOGIN_BUTTON, timeWaits);
-		click(driver, interfaces.DashboardPage.LOGIN_BUTTON);
+		waitForElement(driver, interfaces.AbstractPage.LOGIN_BUTTON, timeWaits);
+		click(driver, interfaces.AbstractPage.LOGIN_BUTTON);
 		sleep(2);
 	}
 	
 	/**
 	 * Click Login Button
 	 */
-	public void moveMouseToLoginDrop() {
-		waitForElement(driver, interfaces.DashboardPage.LOGIN_DROP, timeWaits);
-		click(driver, interfaces.DashboardPage.LOGIN_DROP);
-		
+	public void clickLoginDrop() {
+		waitForElement(driver, interfaces.AbstractPage.LOGIN_DROP, timeWaits);
+		click(driver, interfaces.AbstractPage.LOGIN_DROP);
 	}
 	
 	/**
@@ -53,8 +52,17 @@ public class DashboardPage extends AbstractPage{
 	 * @return
 	 */
 	public boolean isMyAccountButtonDisplayed() {
-		waitForElement(driver, interfaces.DashboardPage.MY_ACCOUNT, timeWaits);
-		return isControlDisplayed(driver, interfaces.DashboardPage.MY_ACCOUNT);
+		waitForElement(driver, interfaces.AbstractPage.MY_ACCOUNT, timeWaits);
+		return isControlDisplayed(driver, interfaces.AbstractPage.MY_ACCOUNT);
+	}
+	
+	/**
+	 * Is Login Failed Message Displayed
+	 * @return
+	 */
+	public boolean isLoginFailedMessageDisplayed() {
+		waitForElement(driver, interfaces.AbstractPage.LOGIN_FAILED_MESSAGE, timeWaits);
+		return isControlDisplayed(driver, interfaces.AbstractPage.LOGIN_FAILED_MESSAGE);
 	}
 	
 	int timeWaits = Constant.TimeWait;

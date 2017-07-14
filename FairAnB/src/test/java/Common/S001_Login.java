@@ -20,13 +20,39 @@ public class S001_Login extends AbstractTest {
 		
 		validUsername = "automation01";
 		validPassword = "12345678";
+		invalidUsername = "invalid";
+		invalidPassword = "invalid";
 		
 	}
 
 	@Test
-	public void S001_Login_TC001_Login_With_Valid_Username_Valid_Password() {
+	public void S001_Login_TC001_Verify_Login_Function() {
 		log.info("Step 01: Click Login Drop");
-		dashboard.moveMouseToLoginDrop();
+		dashboard.clickLoginDrop();
+		
+		log.info("Step 04: Click Login button");
+		dashboard.clickLoginButton();
+		
+		log.info("VP 01. Is My Account button Displayed");
+		verifyTrue(dashboard.isLoginFailedMessageDisplayed());
+		
+		log.info("Step 01: Click Login Drop");
+		dashboard.clickLoginDrop();
+		
+		log.info("Step 02: Input invalid username");
+		dashboard.inputUserName(invalidUsername);
+		
+		log.info("Step 03: Input invalid password");
+		dashboard.inputPassword(invalidPassword);
+		
+		log.info("Step 04: Click Login button");
+		dashboard.clickLoginButton();
+		
+		log.info("VP 01. Is My Account button Displayed");
+		verifyTrue(dashboard.isLoginFailedMessageDisplayed());
+		
+		log.info("Step 01: Click Login Drop");
+		dashboard.clickLoginDrop();
 		
 		log.info("Step 02: Input valid username");
 		dashboard.inputUserName(validUsername);
@@ -40,12 +66,17 @@ public class S001_Login extends AbstractTest {
 		log.info("VP 01. Is My Account button Displayed");
 		verifyTrue(dashboard.isMyAccountButtonDisplayed());
 	}
+	
+	@Test
+	public void S001_Login_TC002_Login_With__Username_Valid_Password() {
+		
+	}
+	
 
 	@AfterClass(alwaysRun = true)
 	public void tearsDown() {
 //		closeBrowser();
 	}
 	DashboardPage dashboard;
-	String validUsername;
-	String validPassword;
+	String validUsername, validPassword, invalidUsername, invalidPassword;
 }
