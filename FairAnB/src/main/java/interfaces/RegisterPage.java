@@ -12,5 +12,6 @@ public class RegisterPage {
 	public static final String PASSWORD_TEXTBOX = "//input[@id='password']";
 	public static final String REPEAT_PASSWORD_TEXTBOX = "//input[@id='passwordAgain']";
 	public static final String SUBMIT_REGISTER_BUTTON = "//input[@id='submitRegistration']";
+	public static final String ERROR_MESSAGE = "//div[@id='registrationError' and contains(.,'%s')]";
 
 }
