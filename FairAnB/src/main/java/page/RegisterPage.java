@@ -138,7 +138,7 @@ public class RegisterPage extends AbstractPage {
 	 *
 	 * @param message
 	 */
-	public boolean checkErrorMessage(String message) {
+	public boolean isErrorMessageDisplayed(String message) {
 		waitForElement(driver, interfaces.RegisterPage.ERROR_MESSAGE, message, timeWaits);
 		return isControlDisplayed(driver, interfaces.RegisterPage.ERROR_MESSAGE, message);
 	}
@@ -175,7 +175,6 @@ public class RegisterPage extends AbstractPage {
 				inputUsername(userName);
 				inputPassword(password);
 				inputRepeatPassword(repeatPassword);
-				// verifyTrue(checkErrorMessage(message));
 				clickSubmitRegisterButton();
 			}
 		} catch (Exception e) {
