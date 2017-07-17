@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="common.ExtentTestNGITestListener"/>
@@ -8,22 +8,10 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="Run on Safari">
+  <test name="Run on Chrome">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="Common.S001_Login"/>
     </classes>
-  </test> <!-- Run on Safari -->
-  <test name="Run on Safari(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="Common.S001_Login">
-        <methods>
-          <include name="tearsDown"/>
-          <include name="f"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Common.S001_Login -->
-    </classes>
-  </test> <!-- Run on Safari(failed) -->
+  </test> <!-- Run on Chrome -->
 </suite> <!-- Failed suite [Suite] -->
