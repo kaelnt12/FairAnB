@@ -9,5 +9,6 @@ public class AbstractPage {
 	public static final String LOGIN_FAILED_MESSAGE = "//div[contains(.,'Login Failed. Username or Password is incorrect.')]";
 	public static final String REGISTER_LINK = "//a[@class='registration-link']";
 	public static final String DYNAMIC_PAGE_HEADER = "//span[contains(.,'%s')]";
+	
 
 }

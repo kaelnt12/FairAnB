@@ -140,7 +140,7 @@
 			<artifactId>tools</artifactId>
 			<version>${tools.version}</version>
 			<scope>system</scope>
-			<systemPath>/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/lib/tools.jar</systemPath>
+			<systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
 		</dependency>
 
 		<dependency>
