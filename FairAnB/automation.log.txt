@@ -1,0 +1,23 @@
+2017-07-14 17:18:47,719 INFO  [Common.S001_Login] - Step 01: Click Login Drop
+2017-07-14 17:18:48,170 INFO  [Common.S001_Login] - Step 02: Click 'Not yet registered?' button
+2017-07-14 17:18:58,330 INFO  [Common.S001_Login] - VP 01. Is 'Register' header displayed
+2017-07-14 17:18:58,477 INFO  [Common.S001_Login] - Step 04: Input First Name
+2017-07-14 17:18:59,979 INFO  [Common.S001_Login] - Step 05: Input Last Name
+2017-07-14 17:19:01,355 INFO  [Common.S001_Login] - Step 06: Select Genre
+2017-07-14 17:19:02,571 INFO  [Common.S001_Login] - Step 07: Select Country
+2017-07-14 17:19:03,793 INFO  [Common.S001_Login] - Step 08: Input State
+2017-07-14 17:19:15,309 INFO  [Common.S001_Login] - Step 09: Input Email Address
+2017-07-14 17:19:17,047 INFO  [Common.S001_Login] - Step 10: Input username
+2017-07-14 17:19:18,655 INFO  [Common.S001_Login] - Step 11: Input Password
+2017-07-14 17:19:20,038 INFO  [Common.S001_Login] - Step 12: Input repeat password
+2017-07-14 17:19:21,379 INFO  [Common.S001_Login] - Step 13: Click Submit Register button
+2017-07-14 17:19:34,648 INFO  [Common.S001_Login] - VP 02. Is My Account Header Displayed
+2017-07-14 17:19:34,805 INFO  [Common.S001_Login] - Step 14: Click My Account Information link
+2017-07-14 17:19:47,307 INFO  [Common.S001_Login] - VP 03. Verify Email, FirstName, LastName, Gender are the same as registered
+2017-07-14 17:19:47,427 INFO  [Common.S001_Login] - ==Verify condition is PASSED==
+2017-07-14 17:19:47,553 INFO  [Common.S001_Login] - ==Verify condition is PASSED==
+2017-07-14 17:19:47,647 INFO  [Common.S001_Login] - ==Verify condition is PASSED==
+2017-07-14 17:19:47,736 INFO  [Common.S001_Login] - ==Verify condition is PASSED==
+2017-07-14 17:19:47,737 INFO  [Common.S001_Login] - Step 15: Click Billing & Shipping Information link
+2017-07-14 17:20:00,353 INFO  [Common.S001_Login] - VP 04. Verify Customer First Name, Customer Last Name, Country, State are the same as registered
+2017-07-14 17:20:00,500 INFO  [Common.S001_Login] - ==Verify condition is FAILED==

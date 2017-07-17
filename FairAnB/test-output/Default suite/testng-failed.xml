@@ -1,43 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="Common.S001_Login"/>
+    </classes>
+  </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="Login.LoginTest">
+      <class name="Common.S001_Login">
         <methods>
-          <include name="TC_005_No_ID_and_Valid_Password"/>
-          <include name="TC_041_Reset_Pwd_with_ValidPwd"/>
-          <include name="TC_007_No_ID_and_Invalid_Password"/>
-          <include name="TC_033_Check_Cancel_Button"/>
-          <include name="TC_003_No_ID_and_No_Password"/>
-          <include name="TC_029_ForgotPwd_Reset_Register_Email"/>
-          <include name="TC_026_ForgotPwd_Without_Email"/>
-          <include name="TC_038_Reset_Pwd_with_ValidPwd"/>
-          <include name="TC_009_Invalid_ID_and_Valid_Password"/>
-          <include name="TC_018_LogIn_AdminAccount"/>
-          <include name="TC_036_Reset_Pwd_without_Input"/>
-          <include name="TC_043_Reset_Pwd_with_PwdisNotSame"/>
-          <include name="TC_035_RestPwd_with_InvalidPwd"/>
-          <include name="TC_044_Reset_Pwd_with_PwdisSame"/>
-          <include name="TC_004_Vaid_ID_and_No_Password"/>
-          <include name="TC_019_LogIn_CompnayAccount"/>
-          <include name="TC_042_Reset_Pwd_with_Pwdmorethan15cha"/>
-          <include name="TC_030_ForgotPwd_Unregister_Email"/>
-          <include name="TC_010_Invalid_ID_and_Invalid_Password"/>
-          <include name="TC_027_ForgotPwd_Invalid_Email"/>
-          <include name="TC_039_Reset_Pwd_with_ValidValue_2times"/>
-          <include name="TC_020_LogIn_BranchAccount"/>
-          <include name="TC_040_Reset_Pwd_with_Pwdlessthan8cha"/>
-          <include name="TC_021_LogIn_AgentAccount"/>
-          <include name="TC_034_RestPwd_with_validPwd"/>
-          <include name="TC_006_Invaid_ID_and_No_Password"/>
-          <include name="TC_028_ForgotPwd_Valid_Email"/>
-          <include name="TC_002_Title_Login_Screen"/>
-          <include name="TC_017_Check_Forgot_Pwd_function"/>
-          <include name="TC_008_Valid_ID_and_Invalid_Password"/>
-          <include name="TC_011_Valid_ID_and_Valid_Password"/>
+          <include name="tearsDown"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- Login.LoginTest -->
+      </class> <!-- Common.S001_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

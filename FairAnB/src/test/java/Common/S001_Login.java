@@ -96,9 +96,13 @@ public class S001_Login extends AbstractTest {
 		verifyEquals(account.getDynamicMyAccountInformation("Gender"), gender.toLowerCase().subSequence(0, 1));
 		
 		log.info("Step 15: Click Billing & Shipping Information link");
-//		account.clickBillingShippingInformationLink();
+		account.clickBillingShippingInformationLink();
 		
-//		log.info("VP 04. Verify Country, State, ");
+		log.info("VP 04. Verify Customer First Name, Customer Last Name, Country, State are the same as registered");
+		verifyEquals(account.getCustomerFirstNameInBillingShippingInformation(), firstName);
+		verifyEquals(account.getCustomerLastNameInBillingShippingInformation(), lastName);
+		verifyEquals(account.getCustomerStateProvinceInBillingShippingInformation(), state);
+		verifyEquals(account.getCustomerCountryInBillingShippingInformation(), country);
 	}
 
 	@Test (enabled = false)

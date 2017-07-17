@@ -3,71 +3,18 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Run on Safari</title>
+  <title>Test Results Report - Run on Chrome</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Run on Safari</h1>
+<h1>Run on Chrome</h1>
 <p>
-  Test duration: 0.014s
+  Test duration: 166.884s
 </p>
 
-  <table class="resultsTable configTable">
-    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
-              <tr class="group">
-        <td colspan="3">Common.S001_Login</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  setUp
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              common.BrowserManager.openBrowser(BrowserManager.java:40)<br />
-              common.AbstractTest.openBrowser(AbstractTest.java:112)<br />
-              Common.S001_Login.setUp(S001_Login.java:17)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
-              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)<br />
-              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
-              org.testng.TestRunner.run(TestRunner.java:632)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
-              org.testng.TestNG.run(TestNG.java:1064)<br />
-              org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)<br />
-                </div>
-      </td>
-</tr>
-    
-      </table>
 
 
   <table class="resultsTable">
@@ -78,30 +25,74 @@
             
 <tr>
   <td class="method">
-                  f
+                  S001_Login_TC001_Register_With_Valid_Information
       </td>
   <td class="duration">
-    0.010s
+    72.887s
   </td>
   <td class="result">
         
     
-        
+            <div class="testOutput">
+                        2017-07-14 17:18:47,719 INFO&nbsp; S001_Login - Step 01: Click Login Drop<br/>
+<br />
+                                2017-07-14 17:18:48,170 INFO&nbsp; S001_Login - Step 02: Click &apos;Not yet registered?&apos; button<br/>
+<br />
+                                2017-07-14 17:18:58,330 INFO&nbsp; S001_Login - VP 01. Is &apos;Register&apos; header displayed<br/>
+<br />
+                                2017-07-14 17:18:58,477 INFO&nbsp; S001_Login - Step 04: Input First Name<br/>
+<br />
+                                2017-07-14 17:18:59,979 INFO&nbsp; S001_Login - Step 05: Input Last Name<br/>
+<br />
+                                2017-07-14 17:19:01,355 INFO&nbsp; S001_Login - Step 06: Select Genre<br/>
+<br />
+                                2017-07-14 17:19:02,571 INFO&nbsp; S001_Login - Step 07: Select Country<br/>
+<br />
+                                2017-07-14 17:19:03,793 INFO&nbsp; S001_Login - Step 08: Input State<br/>
+<br />
+                                2017-07-14 17:19:15,309 INFO&nbsp; S001_Login - Step 09: Input Email Address<br/>
+<br />
+                                2017-07-14 17:19:17,047 INFO&nbsp; S001_Login - Step 10: Input username<br/>
+<br />
+                                2017-07-14 17:19:18,655 INFO&nbsp; S001_Login - Step 11: Input Password<br/>
+<br />
+                                2017-07-14 17:19:20,038 INFO&nbsp; S001_Login - Step 12: Input repeat password<br/>
+<br />
+                                2017-07-14 17:19:21,379 INFO&nbsp; S001_Login - Step 13: Click Submit Register button<br/>
+<br />
+                                2017-07-14 17:19:34,648 INFO&nbsp; S001_Login - VP 02. Is My Account Header Displayed<br/>
+<br />
+                                2017-07-14 17:19:34,805 INFO&nbsp; S001_Login - Step 14: Click My Account Information link<br/>
+<br />
+                                2017-07-14 17:19:47,307 INFO&nbsp; S001_Login - VP 03. Verify Email, FirstName, LastName, Gender are the same as registered<br/>
+<br />
+                                2017-07-14 17:19:47,427 INFO&nbsp; S001_Login - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-07-14 17:19:47,553 INFO&nbsp; S001_Login - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-07-14 17:19:47,647 INFO&nbsp; S001_Login - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-07-14 17:19:47,736 INFO&nbsp; S001_Login - ==Verify condition is PASSED==<br/>
+<br />
+                                2017-07-14 17:19:47,737 INFO&nbsp; S001_Login - Step 15: Click Billing &amp; Shipping Information link<br/>
+<br />
+                                2017-07-14 17:20:00,353 INFO&nbsp; S001_Login - VP 04. Verify Customer First Name, Customer Last Name, Country, State are the same as registered<br/>
+<br />
+                                2017-07-14 17:20:00,500 INFO&nbsp; S001_Login - ==Verify condition is FAILED==<br/>
+<br />
+                  </div>
+    
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              java.util.regex.Matcher.getTextLength(Matcher.java:1283)<br />
-              java.util.regex.Matcher.reset(Matcher.java:309)<br />
-              java.util.regex.Matcher.&lt;init&gt;(Matcher.java:229)<br />
-              java.util.regex.Pattern.matcher(Pattern.java:1093)<br />
-              com.aventstack.extentreports.utils.ExceptionUtil.getExceptionHeadline(ExceptionUtil.java:25)<br />
-              com.aventstack.extentreports.ExtentTest.log(ExtentTest.java:399)<br />
-              com.aventstack.extentreports.ExtentTest.skip(ExtentTest.java:943)<br />
-              com.aventstack.extentreports.ExtentTest.skip(ExtentTest.java:955)<br />
-              common.ExtentTestNGITestListener.onTestSkipped(ExtentTestNGITestListener.java:51)<br />
-              org.testng.internal.Invoker.runTestListeners(Invoker.java:1683)<br />
-              org.testng.internal.Invoker.runTestListeners(Invoker.java:1675)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:700)<br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.ArrayIndexOutOfBoundsException: 1</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              page.MyAccountPage.getCustomerLastNameInBillingShippingInformation(MyAccountPage.java:81)<br />
+              Common.S001_Login.S001_Login_TC001_Register_With_Valid_Information(S001_Login.java:103)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
               org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
               org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
               org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
@@ -125,27 +116,6 @@
 </tr>
       </table>
 
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">Common.S001_Login</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  f
-      </td>
-  <td class="duration">
-    0.004s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-      </table>
 
   
 </body>

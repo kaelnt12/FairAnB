@@ -44,9 +44,9 @@ public class MyAccountPage extends AbstractPage{
 	 * @return
 	 */
 	public String getDynamicMyAccountInformation(String value) {
-		waitForElement(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION, timeWaits);
+		waitForElement(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION_CONTENT, timeWaits);
 		String returnValue = null;
-		String accountInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION, "innerText").split("\n");
+		String accountInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.MY_ACCOUNT_INFORMATION_CONTENT, "innerText").split("\n");
 		for(int i = 0; i < accountInfo.length - 1; i++) {
 			if(accountInfo[i].toLowerCase().contains(value.toLowerCase())) {
 				returnValue =accountInfo[i].toLowerCase()
@@ -58,6 +58,50 @@ public class MyAccountPage extends AbstractPage{
 		return returnValue;
 	}
 	
+	/**
+	 * Get Customer First Name In Billing & Shipping Information
+	 * @return
+	 */
+	public String getCustomerFirstNameInBillingShippingInformation() {
+		waitForElement(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, timeWaits);
+		String billingInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, "innerText").split("\n");
+		String customerName[] = billingInfo[0].split(" ");
+		return customerName[0];
+	}
+	
+	/**
+	 * Get Customer Last Name In Billing & Shipping Information
+	 * @return
+	 */
+	public String getCustomerLastNameInBillingShippingInformation() {
+		waitForElement(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, timeWaits);
+		String billingInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, "innerText").split("\n");
+		System.out.println(billingInfo[0]);
+		String customerName[] = billingInfo[0].split(" ");
+		return customerName[1];
+	}
+	
+	/**
+	 * Get Customer State/Province In Billing Shipping Information
+	 * @return
+	 */
+	public String getCustomerStateProvinceInBillingShippingInformation() {
+		waitForElement(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, timeWaits);
+		String billingInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, "innerText").split("\n");
+		String stateProvince[] = billingInfo[1].split(", ");
+		return stateProvince[0];
+	}
+	
+	/**
+	 * Get Customer Country In Billing Shipping Information
+	 * @return
+	 */
+	public String getCustomerCountryInBillingShippingInformation() {
+		waitForElement(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, timeWaits);
+		String billingInfo[] = getAttributeValue(driver, interfaces.MyAccountPage.BILLING_SHIPPING_INFORMATION_CONTENT, "innerText").split("\n");
+		String country[] = billingInfo[1].split(", ");
+		return country[1];
+	}
 	
 	protected WebDriver driver;
 	int timeWaits = Constant.TimeWait;
