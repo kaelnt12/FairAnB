@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>testDebug.xml</span>
+                    <span>D:\SELENIUM\FairAnB\FairAnB\src\test\resources\testDebug.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Common.S001_Login" hash-for-method="S001_Login_TC001_Register_With_Valid_Information">S001_Login_TC001_Register_With_Valid_Information</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">Common.S001_Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,25 +128,20 @@
                   <a name="S001_Login_TC001_Register_With_Valid_Information">
                   </a> <!-- S001_Login_TC001_Register_With_Valid_Information -->
                   <span class="method-name">S001_Login_TC001_Register_With_Valid_Information</span>
-                  <div class="stack-trace">java.lang.ArrayIndexOutOfBoundsException: 1
-	at page.MyAccountPage.getCustomerLastNameInBillingShippingInformation(MyAccountPage.java:81)
-	at Common.S001_Login.S001_Login_TC001_Register_With_Valid_Information(S001_Login.java:103)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/toantrans./git/FairAnB/FairAnB/src/test/resources/testDebug.xml</span>
+            <span class="header-content">D:\SELENIUM\FairAnB\FairAnB\src\test\resources\testDebug.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;common.ExtentTestNGITestListener&quot;/&gt;
     &lt;listener class-name=&quot;common.ExtentTestNGIReporterListener&quot;/&gt;
@@ -159,18 +154,6 @@
       &lt;class name=&quot;Common.S001_Login&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on Chrome --&gt;
-  &lt;test name=&quot;Run on Chrome(failed)&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;Common.S001_Login&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;tearsDown&quot;/&gt;
-          &lt;include name=&quot;S001_Login_TC001_Register_With_Valid_Information&quot;/&gt;
-          &lt;include name=&quot;setUp&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Common.S001_Login --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Run on Chrome(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,9 +166,6 @@
             <ul>
               <li>
                 <span class="test-name">Run on Chrome (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Run on Chrome(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -215,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'S001_Login_TC001_Register_With_Valid_Information')
 data.setCell(0, 2, 'Common.S001_Login')
-data.setCell(0, 3, 72887);
+data.setCell(0, 3, 39103);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,51 +214,99 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">S001_Login_TC001_Register_With_Valid_Information</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">2017-07-14 17:18:47,719 INFO  S001_Login - Step 01: Click Login Drop
+                <span class="reporter-method-output">2017-07-15 14:27:12,904 INFO  S001_Login - Step 01: Click Login Drop
 </span>
-                <span class="reporter-method-output">2017-07-14 17:18:48,170 INFO  S001_Login - Step 02: Click 'Not yet registered?' button
+                <span class="reporter-method-output">2017-07-15 14:27:13,040 INFO  S001_Login - Step 02: Click 'Not yet registered?' button
 </span>
-                <span class="reporter-method-output">2017-07-14 17:18:58,330 INFO  S001_Login - VP 01. Is 'Register' header displayed
+                <span class="reporter-method-output">2017-07-15 14:27:19,328 INFO  S001_Login - VP 01. Is 'Register' header displayed
 </span>
-                <span class="reporter-method-output">2017-07-14 17:18:58,477 INFO  S001_Login - Step 04: Input First Name
+                <span class="reporter-method-output">2017-07-15 14:27:19,400 INFO  S001_Login - Step 03: Check Error Message for Fist Name
 </span>
-                <span class="reporter-method-output">2017-07-14 17:18:59,979 INFO  S001_Login - Step 05: Input Last Name
+                <span class="reporter-method-output">2017-07-15 14:27:19,465 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:01,355 INFO  S001_Login - Step 06: Select Genre
+                <span class="reporter-method-output">2017-07-15 14:27:19,465 INFO  S001_Login - Step 04: Input First Name
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:02,571 INFO  S001_Login - Step 07: Select Country
+                <span class="reporter-method-output">2017-07-15 14:27:20,633 INFO  S001_Login - Step 05: Check Error Message for Last Name
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:03,793 INFO  S001_Login - Step 08: Input State
+                <span class="reporter-method-output">2017-07-15 14:27:20,686 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:15,309 INFO  S001_Login - Step 09: Input Email Address
+                <span class="reporter-method-output">2017-07-15 14:27:20,686 INFO  S001_Login - Step 06: Input Last Name
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:17,047 INFO  S001_Login - Step 10: Input username
+                <span class="reporter-method-output">2017-07-15 14:27:21,861 INFO  S001_Login - Step 07: Select Genre
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:18,655 INFO  S001_Login - Step 11: Input Password
+                <span class="reporter-method-output">2017-07-15 14:27:22,954 INFO  S001_Login - Step 09: Check Error Message for State/Provice
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:20,038 INFO  S001_Login - Step 12: Input repeat password
+                <span class="reporter-method-output">2017-07-15 14:27:23,006 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:21,379 INFO  S001_Login - Step 13: Click Submit Register button
+                <span class="reporter-method-output">2017-07-15 14:27:23,006 INFO  S001_Login - Step 08: Select Country
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:34,648 INFO  S001_Login - VP 02. Is My Account Header Displayed
+                <span class="reporter-method-output">2017-07-15 14:27:24,137 INFO  S001_Login - Step 10: Input State
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:34,805 INFO  S001_Login - Step 14: Click My Account Information link
+                <span class="reporter-method-output">2017-07-15 14:27:25,300 INFO  S001_Login - Step 11: Check Error Message for Email
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,307 INFO  S001_Login - VP 03. Verify Email, FirstName, LastName, Gender are the same as registered
+                <span class="reporter-method-output">2017-07-15 14:27:25,352 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,427 INFO  S001_Login - ==Verify condition is PASSED==
+                <span class="reporter-method-output">2017-07-15 14:27:25,353 INFO  S001_Login - Step 12: Input Email Address wrong format
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,553 INFO  S001_Login - ==Verify condition is PASSED==
+                <span class="reporter-method-output">2017-07-15 14:27:26,556 INFO  S001_Login - Step 13: Check Error Message for Email Wrong Format
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,647 INFO  S001_Login - ==Verify condition is PASSED==
+                <span class="reporter-method-output">2017-07-15 14:27:26,612 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,736 INFO  S001_Login - ==Verify condition is PASSED==
+                <span class="reporter-method-output">2017-07-15 14:27:26,613 INFO  S001_Login - Step 14: Input Email Address
 </span>
-                <span class="reporter-method-output">2017-07-14 17:19:47,737 INFO  S001_Login - Step 15: Click Billing & Shipping Information link
+                <span class="reporter-method-output">2017-07-15 14:27:27,813 INFO  S001_Login - Step 15: Check Error Message for Username
 </span>
-                <span class="reporter-method-output">2017-07-14 17:20:00,353 INFO  S001_Login - VP 04. Verify Customer First Name, Customer Last Name, Country, State are the same as registered
+                <span class="reporter-method-output">2017-07-15 14:27:27,867 INFO  S001_Login - ==Verify condition is PASSED==
 </span>
-                <span class="reporter-method-output">2017-07-14 17:20:00,500 INFO  S001_Login - ==Verify condition is FAILED==
+                <span class="reporter-method-output">2017-07-15 14:27:27,868 INFO  S001_Login - Step 16: Input username less than 6 characters 
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:29,008 INFO  S001_Login - Step 17: Check Error Message for Username less than 6 characters
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:29,059 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:29,059 INFO  S001_Login - Step 18: Input UserName
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:30,255 INFO  S001_Login - Step 19: Check Error Message for Input Password
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:30,307 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:30,307 INFO  S001_Login - Step 20: Input Password less than 6 characters
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:31,446 INFO  S001_Login - Step 21: Check Error Message for Password less than 6 characters
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:31,498 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:31,498 INFO  S001_Login - Step 22: Input Password
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:32,621 INFO  S001_Login - Step 23: Check Error Message for Repeate Password
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:32,673 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:32,674 INFO  S001_Login - Step 24: Input Repeate Password not match Password 
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:33,870 INFO  S001_Login - Step 25: Check Error Message for Repeate Password not match Password 
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:33,923 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:33,923 INFO  S001_Login - Step 26: Input Repeate Password
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:35,030 INFO  S001_Login - Step 27: Click Submit Register button
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:45,694 INFO  S001_Login - VP 02. Is My Account Header Displayed
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:45,758 INFO  S001_Login - Step 28: Click My Account Information link
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:51,810 INFO  S001_Login - VP 03. Verify Email, FirstName, LastName, Gender are the same as registered
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:51,874 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:51,916 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:51,960 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:52,002 INFO  S001_Login - ==Verify condition is PASSED==
+</span>
+                <span class="reporter-method-output">2017-07-15 14:27:52,002 INFO  S001_Login - Step 29: Click Billing & Shipping Information link
 </span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -310,14 +338,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">S001_Login_TC001_Register_With_Valid_Information</span>
-                <span class="method-start">93722 ms</span>
+                <span class="method-start">20510 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearsDown</span>
-                <span class="method-start">166661 ms</span>
+                <span class="method-start">59620 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -11,7 +11,7 @@
       <class name="Common.S001_Login">
         <methods>
           <include name="tearsDown"/>
-          <include name="f"/>
+          <include name="S001_Login_TC001_Register_With_Valid_Information"/>
         </methods>
       </class> <!-- Common.S001_Login -->
     </classes>

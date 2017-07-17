@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="common.ExtentTestNGITestListener"/>
@@ -14,16 +14,4 @@
       <class name="Common.S001_Login"/>
     </classes>
   </test> <!-- Run on Chrome -->
-  <test name="Run on Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="Common.S001_Login">
-        <methods>
-          <include name="tearsDown"/>
-          <include name="S001_Login_TC001_Register_With_Valid_Information"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Common.S001_Login -->
-    </classes>
-  </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
